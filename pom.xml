@@ -8,11 +8,11 @@
 		<version>4.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>net.javaguides</groupId>
-	<artifactId>springboot-rest-api</artifactId>
+	<groupId>com.springboot.blog</groupId>
+	<artifactId>springboot-blog-rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-rest-api</name>
-	<description>Personal blog Web Application</description>
+	<name>springboot-blog-rest-api</name>
+	<description>Spring boot blog application REST APIs</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,6 +39,29 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>annotationProcessor</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
