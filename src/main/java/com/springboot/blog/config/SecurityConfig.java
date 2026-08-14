@@ -28,6 +28,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) {
         return configuration.getAuthenticationManager();
     }
@@ -39,6 +40,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((authorize) ->
                 // authorize.anyRequest().authenticated()
                 authorize.requestMatchers(HttpMethod.GET, "/api/**").permitAll()
+                        .requestMatchers("/api/auth/**").permitAll()
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults());
 
